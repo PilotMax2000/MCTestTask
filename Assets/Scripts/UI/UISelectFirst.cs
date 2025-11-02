@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace RMTestGame
+namespace RMTestGame.UI
 {
     public class UISelectFirst : MonoBehaviour
     {
@@ -25,7 +24,7 @@ namespace RMTestGame
 
         private void Update()
         {
-            //If in editor player unfocus play mode and go back for it and cullernt selected game object is null, select _first as default
+            //Fixing glitch when editor window is unfocused and focused
             #if UNITY_EDITOR
             if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == null)
             {

@@ -10,12 +10,11 @@ namespace RMTestGame.Arena
         [SerializeField] private  GameObject _playerPrefab;
         [SerializeField] private  GameObject _enemyPrefab;
         [SerializeField] private  int _enemyCount = 1000;
-
-
+        
         private void Start()
         {
-            //back button subscription
             GameInputHandler.Instance.InputSystem.UI.Back.performed += GoToMainMenu;
+            
             StartArenaBattle();
         }
 
